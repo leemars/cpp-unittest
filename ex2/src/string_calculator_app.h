@@ -8,11 +8,12 @@
 
 class StringCalculatorApp {
 public:
-    StringCalculatorApp(std::istream &input, std::ostream &output) : string_calculator(output) {}
+    StringCalculatorApp(std::istream &input, std::ostream &output) : input(input), string_calculator(output) {}
 
     int Run(int argc, char *argv[]);
 
 private:
+    std::istream &input;
     StringCalculator string_calculator;
 };
 
