@@ -22,3 +22,7 @@ TEST_F(StringCalculatorTest, TakesTwoNumbers) {
 TEST_F(StringCalculatorTest, TakesUnknownAmountOfNumbers) {
     ASSERT_EQ(15, string_calculator.Add("1,2,3,4,5"));
 }
+
+TEST_F(StringCalculatorTest, HandlesNewLinesBetweenNumbers) {
+    ASSERT_EQ(6, string_calculator.Add("1\n2,3"));
+}
