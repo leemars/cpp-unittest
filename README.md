@@ -15,3 +15,4 @@ From: http://osherove.com/tdd-kata-1/
 3. Allow the Add method to handle new lines between numbers (instead of commas).
     1. the following input is ok:  “1\n2,3”  (will equal 6)
     2. the following input is NOT ok:  “1,\n” (not need to prove it - just clarifying)
+4. Numbers bigger than 1000 should be ignored, so adding 2 + 1001  = 2
