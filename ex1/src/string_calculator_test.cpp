@@ -14,3 +14,7 @@ TEST_F(StringCalculatorTest, TakesZeroNumbers) {
 TEST_F(StringCalculatorTest, TakesOneNumber) {
     ASSERT_EQ(1, string_calculator.Add("1"));
 }
+
+TEST_F(StringCalculatorTest, TakesTwoNumbers) {
+    ASSERT_EQ(3, string_calculator.Add("1,2"));
+}
