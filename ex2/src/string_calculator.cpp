@@ -23,5 +23,7 @@ int StringCalculator::Add(std::string numbers) {
         iss.ignore(kDelimeterLength);
     }
 
+    output << "The result is " << result << std::endl;
+
     return result;
 }
