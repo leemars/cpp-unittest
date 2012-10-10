@@ -13,7 +13,9 @@ int StringCalculator::Add(std::string numbers) {
     while (!iss.eof()) {
         int oper = 0;
         iss >> oper;
-        result += oper;
+        if (oper <= 1000) {
+            result += oper;
+        }
 
         iss.ignore(1);
     }
