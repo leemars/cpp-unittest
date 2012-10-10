@@ -13,5 +13,12 @@ int StringCalculator::Add(std::string numbers) {
     int result = 0;
     iss >> result;
 
+    char delim;
+    iss >> delim;
+
+    int oper = 0;
+    iss >> oper;
+    result += oper;
+
     return result;
 }
