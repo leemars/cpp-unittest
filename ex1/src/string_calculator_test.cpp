@@ -10,3 +10,7 @@ protected:
 TEST_F(StringCalculatorTest, TakesZeroNumbers) {
     ASSERT_EQ(0, string_calculator.Add(""));
 }
+
+TEST_F(StringCalculatorTest, TakesOneNumber) {
+    ASSERT_EQ(1, string_calculator.Add("1"));
+}
