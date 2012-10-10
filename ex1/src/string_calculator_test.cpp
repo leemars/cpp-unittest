@@ -18,3 +18,7 @@ TEST_F(StringCalculatorTest, TakesOneNumber) {
 TEST_F(StringCalculatorTest, TakesTwoNumbers) {
     ASSERT_EQ(3, string_calculator.Add("1,2"));
 }
+
+TEST_F(StringCalculatorTest, TakesUnknownAmountOfNumbers) {
+    ASSERT_EQ(15, string_calculator.Add("1,2,3,4,5"));
+}
