@@ -9,16 +9,14 @@ int StringCalculator::Add(std::string numbers) {
     }
 
     std::istringstream iss(numbers);
-
     int result = 0;
-    iss >> result;
+    while (!iss.eof()) {
+        int oper = 0;
+        iss >> oper;
+        result += oper;
 
-    char delim;
-    iss >> delim;
-
-    int oper = 0;
-    iss >> oper;
-    result += oper;
+        iss.ignore(1);
+    }
 
     return result;
 }
