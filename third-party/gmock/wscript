@@ -1,0 +1,15 @@
+def build(bld):
+    bld.stlib(target='gmock',
+              source=['src/gmock-all.cc'],
+              includes=['.',
+                        '..'],
+              export_includes=['..'],
+              use=['gtest'])
+
+    bld.stlib(target='gmock_main',
+              source=['src/gmock_main.cc'],
+              includes=['.',
+                        '..'],
+              use=['gmock'])
+
+# vim: set ft=python expandtab ts=4 sw=4 sts=4 tw=100:

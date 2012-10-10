@@ -1,0 +1,10 @@
+def build(bld):
+    bld.read_shlib('pthread')
+
+    bld.stlib(target='gtest',
+              source=['src/gtest-all.cc'],
+              includes=['.',
+                        '..'],
+              use=['pthread'])
+
+# vim: set ft=python expandtab ts=4 sw=4 sts=4 tw=100:
