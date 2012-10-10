@@ -1,9 +1,12 @@
 #include "string_calculator.h"
 
+#include <sstream>
+
 #include "third-party/gmock/gmock.h"
 
 class StringCalculatorTest : public ::testing::Test {
 protected:
+    std::ostringstream output;
     StringCalculator string_calculator;
 };
 
@@ -29,4 +32,9 @@ TEST_F(StringCalculatorTest, HandlesNewLinesBetweenNumbers) {
 
 TEST_F(StringCalculatorTest, IgnoresNumbersBiggerThan1000) {
     ASSERT_EQ(6, string_calculator.Add("1\n2,1001,3"));
+}
+
+TEST_F(StringCalculatorTest, OutputsResult) {
+    ASSERT_EQ(6, string_calculator.Add("1,2,3"));
+    ASSERT_EQ("The result is 6\n", output.str());
 }
