@@ -26,3 +26,7 @@ TEST_F(StringCalculatorTest, TakesUnknownAmountOfNumbers) {
 TEST_F(StringCalculatorTest, HandlesNewLinesBetweenNumbers) {
     ASSERT_EQ(6, string_calculator.Add("1\n2,3"));
 }
+
+TEST_F(StringCalculatorTest, IgnoresNumbersBiggerThan1000) {
+    ASSERT_EQ(6, string_calculator.Add("1\n2,1001,3"));
+}
