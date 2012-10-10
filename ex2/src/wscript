@@ -1,0 +1,26 @@
+from waflib import Configure
+Configure.autoconfig = True
+
+
+def options(opt):
+    opt.load('compiler_cxx')
+    
+
+def configure(cnf):
+    cnf.load('compiler_cxx')
+
+
+def build(bld):
+    bld.recurse('third-party')
+    
+    bld.stlib(target='string_calculator',
+              source=['string_calculator.cpp'],
+              includes='.')
+
+    bld.program(target='string_calculator_test',
+                source=['string_calculator_test.cpp'],
+                includes='.',
+                use=['string_calculator',
+                     'gmock_main'])
+
+# vim: set ft=python expandtab ts=4 sw=4 sts=4 tw=100:
