@@ -12,3 +12,6 @@ From: http://osherove.com/tdd-kata-1/
     3. Remember to solve things as simply as possible so that you force yourself to write tests you did not think about
     4. Remember to refactor after each passing testt 
 2. Allow the Add method to handle an unknown amount of numbers
+3. Allow the Add method to handle new lines between numbers (instead of commas).
+    1. the following input is ok:  “1\n2,3”  (will equal 6)
+    2. the following input is NOT ok:  “1,\n” (not need to prove it - just clarifying)
