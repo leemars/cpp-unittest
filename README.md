@@ -27,3 +27,14 @@ Add the following features to String Calculator (either in the same class, or us
 1. Everytime you call Add(string) it also outputs the number result of the calculation in a new line to the terminal or console. (remember to try and do this test first!)
 2. Create a program (test first)that uses string calculator, which the user can invoke through the terminal/console by calling “scalc ‘1,2,3’” and will output the following line before exiting: “The result is 6”
 3. Instead of exiting after the first result, the program will ask the user for “another input please” and print the result of the new user input out as well, until the user gives no input and just preses enter. in that case it will exit.
+
+TDD Kata 3 - Leap Year
+----------------------
+
+From: https://github.com/garora/TDD-Katas#leap-year-
+
+Write a function that returns true or false depending on whether its input integer is a leap year or not.
+
+A leap year is defined as one that is divisible by 4, but is not otherwise divisible by 100 unless it is also divisble by 400.
+
+For example, 2001 is a typical common year and 1996 is a typical leap year, whereas 1900 is an atypical common year and 2000 is an atypical leap year.
