@@ -11,3 +11,8 @@ TEST(DateUtilTest, TypicalLeapYearIsDivisibleBy4ButNotDivisibleBy100) {
     DateUtil util;
     ASSERT_TRUE(util.IsLeapYear(1996));
 }
+
+TEST(DateUtilTest, AtypicalCommonYearIsDivisibleBy4AndDivisibleBy100ButNotDivisibleBy400) {
+    DateUtil util;
+    ASSERT_FALSE(util.IsLeapYear(1900));
+}
