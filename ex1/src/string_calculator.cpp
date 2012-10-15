@@ -13,11 +13,14 @@ int StringCalculator::Add(std::string numbers) {
     while (!iss.eof()) {
         int oper = 0;
         iss >> oper;
-        if (oper <= 1000) {
+
+        const int kUpboundOfValidNumber = 1000;
+        if (oper <= kUpboundOfValidNumber) {
             result += oper;
         }
 
-        iss.ignore(1);
+        const int kDelimeterLength = 1;
+        iss.ignore(kDelimeterLength);
     }
 
     return result;
